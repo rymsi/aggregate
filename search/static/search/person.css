@@ -1,0 +1,52 @@
+.infobox {
+    width:250px;
+    font-size:.9em;
+    font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+    line-height: 1.42857143;
+    
+}
+
+.infobox p {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.widget-row {
+    text-align:center;
+    
+}
+.widget-row.Democratic {
+    background-color: #003388;
+    color:white;
+    font-weight:bold;
+}
+.widget-row.Republican {
+    background-color: red;
+    color:white;
+    font-weight:bold;
+}
+
+.widget-value {
+    display:inline-block;
+    padding:0;
+    margin-top:0;
+    margin-bottom:0;
+    
+}
+.widget-key {
+    font-weight:bold;
+    display:inline-block;
+    padding:0;
+    margin:0;
+}
+.wikipedia {
+    display:inline-block;
+    width:70%;
+}
+
+.ballotpedia {
+    float:right;
+    margin:auto
+    width:30%;
+    border: 1px solid #003388;
+}

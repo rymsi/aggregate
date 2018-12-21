@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>aggregate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'search/person.css'%}" />
+    <script src="{% static 'search/person.js' %}"></script>
+</head>
+<body>
+    <div class='mainContainer'>
+        <h1> {{ title }} </h1>
+        <div class='wikipedia'>
+        {% for paragraph in wikipedia %}
+            <p> {{ paragraph }} </p>
+        {% endfor %}
+        </div>
+        <div class="ballotpedia">
+            {{ ballotpedia|safe }}
+        </div>
+        <div class=politifact>
+            {% for s, v, l in politifact %}
+                <p>
+                    {{s|safe}}
+                    {{v|safe}}
+                    <img src="{{l|safe}}">
+                </p>
+            {% endfor %}
+        </div>
+        
+    </div>
+</body>
+</html>
