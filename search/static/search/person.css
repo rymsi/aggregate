@@ -26,6 +26,12 @@
     font-weight:bold;
 }
 
+.widget-row.Independent {
+    background-color: grey;
+    color:white;
+    font-weight:bold;
+}
+
 .widget-value {
     display:inline-block;
     padding:0;
@@ -46,7 +52,120 @@
 
 .ballotpedia {
     float:right;
-    margin:auto
-    width:30%;
     border: 1px solid #003388;
+}
+
+.politifact {
+    display:inline-block;
+    height:auto;
+    
+}
+.politifact_object_left {
+
+    display: inline-block;
+    float:left;
+    border: solid 1px green;
+    width:360px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.politifact_object_right {
+
+    display: inline-block;
+    float:right;
+    margin-right:0;
+    border: solid 1px green;
+    width:360px;
+    margin-top:10px;
+    margin-bottom:25px;
+}
+
+.img-verdict {
+    display: inline-block;
+    float: right;
+    width: 140px;
+
+}
+
+.img-verdict img {
+    display:block;
+    width:120px;
+    height: auto;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    
+}
+
+.verdict {
+    display:inline-block;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+.statement {
+    display: inline-block;
+    width:55.2%;
+    margin:10px;
+    font-size: 16px;
+
+}
+
+.mainContainer {
+    padding-top:20px;
+    margin-left:70px;
+    margin-right:50px;
+    
+}
+
+.committees {
+    display: inline-block;
+    width:400px;
+    margin-top:0;
+    padding-top:0;
+
+}
+
+
+.propublica {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    border: 1px solid green;
+    
+}
+
+#member-bill-subjects{
+    display: inline-block;
+    width:400px;
+}
+
+h4 {
+    margin:0;
+    
+}
+
+.left {
+    display:inline-block;
+    width:250px;
+    padding-left:30px;
+    margin-right: 20px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+
+}
+
+.right {
+    display:inline-block;
+    position:absolute;
+    width:750px;
+    height: auto;
+}
+
+.statement-source {
+    font-weight:bold;
 }

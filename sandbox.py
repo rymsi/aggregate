@@ -5,31 +5,77 @@ from requests import get
 from bs4 import BeautifulSoup
 import re
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/Junaid/Documents/Aggregate/Scraper/Aggregate-f1762ced81c5.json"
+        
+string = '''Alabama 
+Alaska 
+Arizona 
+Arkansas 
+California 
+Colorado 
+Connecticut 
+Delaware 
+Florida 
+Georgia 
+Hawaii 
+Idaho 
+Illinois Indiana 
+Iowa 
+Kansas 
+Kentucky 
+Louisiana 
+Maine 
+Maryland 
+Massachusetts 
+Michigan 
+Minnesota 
+Mississippi 
+Missouri 
+Montana Nebraska 
+Nevada 
+New Hampshire 
+New Jersey 
+New Mexico 
+New York 
+North Carolina 
+North Dakota 
+Ohio 
+Oklahoma 
+Oregon 
+Pennsylvania Rhode Island 
+South Carolina 
+South Dakota 
+Tennessee 
+Texas 
+Utah 
+Vermont 
+Virginia 
+Washington 
+West Virginia 
+Wisconsin 
+Wyoming'''.replace('\n', '').split(' ') 
+
+print(string)
+                      
+                      
+                      
+                      
+                      
+                      
 
 
-client = datastore.Client('aggregate-223323')
-query = client.query(kind='senators')
-query.add_filter('Index', '=', 5)
-
-
-result = list(query.fetch())[0]
-
-response = get(result['Ballotpedia'])
-soup = soup = BeautifulSoup(response.content, 'html.parser')
-
-html = soup.find(class_='infobox person')
-print(html)
-
-
-
-
-
-
-
-
-
-
+#client = datastore.Client('aggregate-223323')
+#query = client.query(kind='senators')
+#results = list(query.fetch())
+#for result in results:
+#    print(result['Propublica'])
+##
+#result = list(query.fetch())[0]
+#
+#response = get(result['Ballotpedia'])
+#soup = soup = BeautifulSoup(response.content, 'html.parser')
+#
+#html = soup.find(class_='infobox person')
+#print(html)
 
 
 

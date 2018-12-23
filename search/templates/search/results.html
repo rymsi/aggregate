@@ -12,8 +12,8 @@
 <body>
     <div class='mainContainer'>
         <ul>
-        {% for name, urlName in results %}
-            <li> <a href="/person/{{ urlName }}">{{ name.Name }}</a> </li>
+        {% for title, nameInUrl in results %}
+            <li> <a href="/person/{{ nameInUrl }}">{{ title }}</a> </li>
         {% endfor %}
         </ul>
     </div>

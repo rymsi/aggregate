@@ -10,6 +10,7 @@
     <script src="{% static 'search/person.js' %}"></script>
 </head>
 <body>
+   
     <div class='mainContainer'>
         <h1> {{ title }} </h1>
         <div class='wikipedia'>
@@ -20,16 +21,31 @@
         <div class="ballotpedia">
             {{ ballotpedia|safe }}
         </div>
-        <div class=politifact>
-            {% for s, v, l in politifact %}
-                <p>
-                    {{s|safe}}
-                    {{v|safe}}
-                    <img src="{{l|safe}}">
-                </p>
-            {% endfor %}
+    </div>
+    <div class="second-container">
+        <div class="left">
+            <div class="stats">{{ propublica.2|safe }}</div>    
         </div>
-        
+        <div class="right">
+            <div class=politifact>
+                {% for s, v, l, x in politifact %}
+                    <div class="politifact_object_{% cycle 'left' 'right' %}">
+                        <div class="statement">
+                            <span class="statement-itself"> {{s|safe}} </span>
+                            <br><span class="statement-source"> {{ x }} </span>
+                        </div>
+                        <div class="img-verdict">   
+                            <img src="{{l|safe}}">
+                            <span class="verdict"> {{v|safe}} </span>
+                        </div> 
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="propublica">
+                <div class="committees">{{ propublica.0|safe }}</div>
+                {{ propublica.1|safe }}
+            </div>
+        </div>
     </div>
 </body>
 </html>
